@@ -8,7 +8,7 @@ namespace MVCWebApplication
 {
     public interface IBlogRepository
     {
-        Task<User[]> GetUsers();
         Task AddUser(User user);
+        Task<User[]> GetUsers();
     }
 }

@@ -22,6 +22,12 @@ namespace MVCWebApplication.Controllers
             return View(authors);
         }
 
+        [HttpGet]
+        public IActionResult Register()
+        {
+            return View();
+        }
+
         [HttpPost]
         public async Task<IActionResult> Register(User newUser)
         {

@@ -27,7 +27,7 @@ namespace MVCWebApplication
         public void ConfigureServices(IServiceCollection services)
         {
             string connection = Configuration.GetConnectionString("DefaultConnection");
-            IServiceCollection serviceCollection = services.AddDbContext<BlogContext>(options => options.UseSqlServer(connection));
+            services.AddDbContext<BlogContext>(options => options.UseSqlServer(connection));
             services.AddControllersWithViews();
             services.AddSingleton<IBlogRepository, BlogRepository>();
         }
